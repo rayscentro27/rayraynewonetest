@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Contact, Lender, ApplicationSubmission } from '../../types';
 /* Added ArrowRight to imports */
 import { Send, CheckCircle, Clock, AlertTriangle, FileText, Upload, RefreshCw, Briefcase, ChevronRight, Play, Check, ArrowRight } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 const MOCK_LENDERS: Lender[] = [
   { id: 'l_bluevine', name: 'Bluevine', logo: '🟦', type: 'Fintech', minScore: 625, minRevenue: 10000, minTimeInBusinessMonths: 6, maxAmount: 250000, description: 'Fast LOC', applicationLink: '#' },

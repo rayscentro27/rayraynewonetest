@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { Smartphone, Upload, Save, CheckCircle, Share2, FileCode, AlertTriangle, RefreshCw, Sparkles, Download, Apple, Globe, Copy, MessageSquare, X } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface MobileAppManagerProps {
   appName?: string;

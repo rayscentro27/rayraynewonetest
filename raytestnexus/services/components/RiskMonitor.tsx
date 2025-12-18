@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { RiskAlert } from '../../types';
 import { ShieldAlert, AlertTriangle, Search, Activity, Lock, Scale, FileWarning, RefreshCw, Eye, CheckCircle } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 const MOCK_ALERTS: RiskAlert[] = [
   { id: 'alert_1', contactId: '1', contactName: 'TechCorp Solutions', type: 'UCC Filing', severity: 'Critical', description: 'UCC-1 Filed by QuickCapital LLC. Potential Stacking.', date: 'Today, 9:00 AM', status: 'Active', source: 'State SOS' },

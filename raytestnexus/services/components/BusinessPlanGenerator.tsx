@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Contact, BusinessPlan } from '../../types';
 import { BookOpen, Sparkles, Download, ArrowRight, Printer, RefreshCw, CheckCircle, Lightbulb } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface BusinessPlanGeneratorProps {
   contact?: Contact; // Optional, can be used standalone

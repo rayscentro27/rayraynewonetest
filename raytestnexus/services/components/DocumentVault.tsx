@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Contact, ClientDocument, FinancialSpreading, Activity } from '../../types';
 import { Folder, FileText, Upload, CheckCircle, AlertCircle, Clock, Eye, Download, Shield, X, MoreVertical, Loader, BrainCircuit, ScanLine, Share2, MessageSquare, Send, Sparkles, AlertTriangle, Fingerprint } from 'lucide-react';
 import { supabase } from '../lib/supabaseClient';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 import SecureShareModal from './SecureShareModal';
 
 interface DocumentVaultProps {

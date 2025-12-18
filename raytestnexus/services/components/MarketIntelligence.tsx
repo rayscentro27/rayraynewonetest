@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Target, Search, Loader, Zap, Globe, TrendingUp, AlertTriangle, CheckCircle, BarChart2 } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 import { MarketReport } from '../../types';
 
 const MarketIntelligence: React.FC = () => {

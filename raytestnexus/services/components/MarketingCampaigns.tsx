@@ -7,7 +7,7 @@ import {
   AlertCircle, Layout, Plus, Trash2, Calendar, Smartphone as TikTokIcon, Key, ExternalLink,
   AlertTriangle
 } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface MarketingCampaignsProps {
   contacts: Contact[];

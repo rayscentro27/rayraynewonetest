@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Contact, FundingOffer } from '../../types';
 import { Calculator, Zap, DollarSign, TrendingUp, ShieldCheck, AlertCircle, RefreshCw, CheckCircle, BarChart3 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface DealStructureProps {
   contact: Contact;

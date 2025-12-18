@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Contact, DocumentTemplate } from '../../types';
 import { FileText, Sparkles, Save, Download, Copy, RefreshCw, ChevronRight, User } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface DocumentGeneratorProps {
   contacts: Contact[];

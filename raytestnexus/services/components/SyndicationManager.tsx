@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Contact, Investor, Syndication } from '../../types';
 import { PieChart, Users, DollarSign, Briefcase, Plus, CheckCircle, Mail, TrendingUp, Sparkles, RefreshCw } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface SyndicationManagerProps {
   contacts: Contact[];

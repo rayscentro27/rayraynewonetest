@@ -6,7 +6,7 @@ import {
   MoreVertical, User, Sparkles, RefreshCw, X, Instagram, Facebook, Zap, Bot,
   Paperclip, Tag, ArrowRight 
 } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface UnifiedInboxProps {
   contacts: Contact[];

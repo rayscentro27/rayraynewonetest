@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Star, MessageSquare, ThumbsUp, Shield, RefreshCw, Send, Code, AlertTriangle, CheckCircle, Sparkles, Globe, Link, X, Loader } from 'lucide-react';
 import { Review } from '../../types';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 const MOCK_REVIEWS: Review[] = [
   { id: 'rev_1', contactName: 'Alice Freeman', company: 'TechCorp', rating: 5, comment: 'Nexus got us funded in 24 hours. Incredible service!', date: '2 days ago', source: 'Google', status: 'Pending' },

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { LeadForm, Contact } from '../../types';
 import { LayoutTemplate, Sparkles, Eye, Save, Code, CheckCircle, RefreshCw, Palette, Type, MousePointerClick, ExternalLink } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface FormBuilderProps {
   onAddLead?: (lead: Partial<Contact>) => void;

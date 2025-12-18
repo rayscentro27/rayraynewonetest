@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { PipelineRule } from '../../types';
 import { GitBranch, Zap, Plus, Trash2, Play, AlertCircle, ArrowRight, CheckCircle, Sparkles, RefreshCw, Layers } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 const WorkflowAutomation: React.FC = () => {
   const [rules, setRules] = useState<PipelineRule[]>([

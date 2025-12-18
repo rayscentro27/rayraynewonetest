@@ -6,7 +6,7 @@ import {
   Target, Video, RefreshCw, Check, ArrowRight, Globe, 
   UserPlus, ShieldAlert, BarChart3, TrendingUp, Zap, Users
 } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 import ActivityTimeline from './ActivityTimeline';
 import MessageCenter from './MessageCenter';
 import DocumentVault from './DocumentVault';

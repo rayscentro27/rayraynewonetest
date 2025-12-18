@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { ExternalLink, CreditCard, Landmark, Search, FileText, Shield, Briefcase, Hash, Video, PlayCircle, Sparkles, Youtube, ArrowRight, Loader, Calculator, Percent, DollarSign, Activity, AlertTriangle, BookOpen, GraduationCap, Zap, RefreshCw, CheckCircle, Truck } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 const AdminResources: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'tools' | 'training' | 'calculators'>('tools');

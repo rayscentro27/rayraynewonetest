@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Contact, Activity, ClientTask } from '../../types';
 import { Phone, PhoneOff, Mic, StopCircle, User, FileText, ChevronRight, X, Clock, Play, SkipForward, CheckCircle, AlertTriangle, Calendar, MessageSquare, BarChart2, Zap, BrainCircuit, RefreshCw, Volume2, ArrowRight } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 import { GoogleGenAI, LiveServerMessage, Modality, Type, FunctionDeclaration } from '@google/genai';
 
 function decode(base64: string) {

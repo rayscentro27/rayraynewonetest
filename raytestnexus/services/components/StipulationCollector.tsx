@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { Contact, Stipulation, ClientDocument } from '../../types';
 import { ClipboardList, Plus, Trash2, Upload, CheckCircle, AlertTriangle, RefreshCw, Send, ScanLine, FileText, Loader } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface StipulationCollectorProps {
   contact: Contact;

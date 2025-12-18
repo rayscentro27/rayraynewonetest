@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Contact } from '../../types';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, Legend, Cell } from 'recharts';
 import { TrendingUp, Users, DollarSign, Activity, Sparkles, AlertCircle, RefreshCw, Trophy, Phone, Target, BarChart3 } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface AnalyticsDashboardProps {
   contacts: Contact[];

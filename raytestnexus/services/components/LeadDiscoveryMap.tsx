@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Search, MapPin, Plus, Loader, Globe, Star, Navigation, Building, Users, Sparkles } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 import { Contact } from '../../types';
 
 interface LeadDiscoveryMapProps {

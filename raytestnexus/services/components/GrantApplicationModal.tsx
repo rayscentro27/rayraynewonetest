@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Contact, Grant } from '../../types';
 import { X, Sparkles, Save, RefreshCw, Copy, CheckCircle, Briefcase, Calendar, DollarSign, Building } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface GrantApplicationModalProps {
   grant: Grant;

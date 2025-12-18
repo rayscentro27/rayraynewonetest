@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
 import { Mic, StopCircle, Play, Sparkles, Volume2, Award, AlertCircle, BarChart3, Target, MessageSquare, Lightbulb, RefreshCw, ChevronRight, BrainCircuit, Shield, Clock, Trophy, Activity, CheckCircle } from 'lucide-react';
 import { SalesSession } from '../../types';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 const SCENARIOS = [
   {

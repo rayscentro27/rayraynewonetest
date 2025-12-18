@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Course } from '../../types';
 import { BookOpen, Plus, Sparkles, RefreshCw, Trash2, Edit2, PlayCircle, Save, CheckCircle, Video, Upload } from 'lucide-react';
-import * as geminiService from '../services/geminiService';
+import * as geminiService from '../geminiService';
 
 interface CourseBuilderProps {
   courses: Course[];
