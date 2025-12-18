@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, CreditCardProduct, ClientTask } from '../types';
+import { Contact, CreditCardProduct, ClientTask } from '../../types';
 import { CreditCard, Search, ArrowRight } from 'lucide-react';
 
 const CARD_DATABASE: CreditCardProduct[] = [

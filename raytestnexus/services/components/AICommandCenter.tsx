@@ -1,7 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Sparkles, Bot, ChevronDown, CheckCircle, Activity as ActivityIcon } from 'lucide-react';
-import { Contact, ChatMessage, Activity } from '../types';
+import { Contact, ChatMessage, Activity } from '../../types';
 import * as geminiService from '../services/geminiService';
 
 interface AICommandCenterProps {

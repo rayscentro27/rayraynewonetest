@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, ComplianceRecord } from '../types';
+import { Contact, ComplianceRecord } from '../../types';
 import { ShieldCheck, AlertTriangle, CheckCircle, RefreshCw, Lock, UserCheck, Building2, Globe, Clock, Shield } from 'lucide-react';
 
 interface ComplianceCenterProps {

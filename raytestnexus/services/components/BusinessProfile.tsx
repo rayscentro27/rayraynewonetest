@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, BusinessProfile } from '../types';
+import { Contact, BusinessProfile } from '../../types';
 import { Building2, MapPin, Globe, Calendar, Percent, Save, CheckCircle, AlertTriangle, ShieldCheck, RefreshCw } from 'lucide-react';
 
 interface BusinessProfileProps {

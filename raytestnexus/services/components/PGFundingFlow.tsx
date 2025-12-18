@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { FundingFlowStep, Contact } from '../types';
+import { FundingFlowStep, Contact } from '../../types';
 import { CheckCircle, Circle, ArrowRight, Video, DollarSign, FileText, ShieldCheck, Loader, CreditCard, Play, Plus, Trash2, CalendarCheck } from 'lucide-react';
 
 interface PGFundingFlowProps {

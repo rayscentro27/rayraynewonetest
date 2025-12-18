@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Star, MessageSquare, ThumbsUp, Shield, RefreshCw, Send, Code, AlertTriangle, CheckCircle, Sparkles, Globe, Link, X, Loader } from 'lucide-react';
-import { Review } from '../types';
+import { Review } from '../../types';
 import * as geminiService from '../services/geminiService';
 
 const MOCK_REVIEWS: Review[] = [

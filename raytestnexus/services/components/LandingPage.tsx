@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Hexagon, ArrowRight, ShieldCheck, Zap, BarChart3, Globe, CheckCircle, Star, Sparkles, Layout, Users, Smartphone } from 'lucide-react';
-import { ViewMode, AgencyBranding } from '../types';
+import { ViewMode, AgencyBranding } from '../../types';
 
 interface LandingPageProps {
   onNavigate: (view: ViewMode) => void;

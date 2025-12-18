@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, Lender, ApplicationSubmission } from '../types';
+import { Contact, Lender, ApplicationSubmission } from '../../types';
 /* Added ArrowRight to imports */
 import { Send, CheckCircle, Clock, AlertTriangle, FileText, Upload, RefreshCw, Briefcase, ChevronRight, Play, Check, ArrowRight } from 'lucide-react';
 import * as geminiService from '../services/geminiService';

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Hexagon, CheckCircle, ArrowRight, Zap, TrendingUp, ShieldCheck, DollarSign, Clock, LayoutDashboard, Sparkles, Smartphone, Award } from 'lucide-react';
-import { ViewMode } from '../types';
+import { ViewMode } from '../../types';
 
 interface ClientLandingPageProps {
   onNavigate: (view: ViewMode) => void;

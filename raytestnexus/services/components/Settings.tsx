@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Globe, Save, CheckCircle, Shield, Layers, Server, Key, ShieldCheck, Image, Share2, Database, HardDrive, Cpu, Zap, Wifi, AlertTriangle, RefreshCw, Trash2, Linkedin, Instagram, Facebook, Twitter, Smartphone, ExternalLink } from 'lucide-react';
-import { AuditLog, Integration, AgencyBranding } from '../types';
+import { AuditLog, Integration, AgencyBranding } from '../../types';
 import { useAuth } from '../contexts/AuthContext';
 
 interface SettingsProps {

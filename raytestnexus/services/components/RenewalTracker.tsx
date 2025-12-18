@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, FundedDeal } from '../types';
+import { Contact, FundedDeal } from '../../types';
 import { RefreshCw, DollarSign, TrendingUp, CheckCircle, Clock, AlertCircle, ArrowRight, Mail } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 

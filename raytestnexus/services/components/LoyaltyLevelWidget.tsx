@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Contact } from '../types';
+import { Contact } from '../../types';
 import { Award, Zap, Users, TrendingUp, Lock, CheckCircle, Crown, Star } from 'lucide-react';
 
 interface LoyaltyLevelWidgetProps {

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { Contact, InboxThread, UnifiedMessage } from '../types';
+import { Contact, InboxThread, UnifiedMessage } from '../../types';
 import { 
   Mail, MessageSquare, MessageCircle, Search, Filter, Archive, Send, 
   MoreVertical, User, Sparkles, RefreshCw, X, Instagram, Facebook, Zap, Bot,

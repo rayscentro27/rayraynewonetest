@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, Command, User, FileText, ArrowRight, LayoutDashboard, Settings, Users, Globe, Zap, Mail, Phone, Plus, Briefcase, PieChart, CreditCard, Receipt, GitBranch, Share2, Star, Target, RefreshCw } from 'lucide-react';
-import { Contact, ViewMode } from '../types';
+import { Contact, ViewMode } from '../../types';
 
 interface CommandPaletteProps {
   isOpen: boolean;

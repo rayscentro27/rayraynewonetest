@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { X, Check, Bell, FileText, User, DollarSign, AlertCircle, Info, CheckCircle } from 'lucide-react';
-import { Notification } from '../types';
+import { Notification } from '../../types';
 
 interface NotificationCenterProps {
   isOpen: boolean;

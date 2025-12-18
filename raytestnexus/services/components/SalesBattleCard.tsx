@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SalesBattleCard as BattleCardType } from '../types';
+import { SalesBattleCard as BattleCardType } from '../../types';
 import { ShieldCheck, Target, AlertTriangle, MessageCircle, ArrowRight, Zap, Info } from 'lucide-react';
 
 interface SalesBattleCardProps {

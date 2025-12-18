@@ -1,6 +1,6 @@
 
 import React, { useState, useRef } from 'react';
-import { Contact, FundingOffer, Invoice, ClientDocument } from '../types';
+import { Contact, FundingOffer, Invoice, ClientDocument } from '../../types';
 import { DollarSign, Calendar, Percent, CheckCircle, Send, FileText, PenTool, Loader, Shield, AlertTriangle, Scale, Upload, X, PartyPopper, BarChart3, ArrowRight, CheckSquare, Square, Sparkles } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 import SmartContractSigner from './SmartContractSigner';

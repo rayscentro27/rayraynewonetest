@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ActiveLoan } from '../types';
+import { ActiveLoan } from '../../types';
 import { Briefcase, AlertCircle, CheckCircle, Clock, DollarSign, Calendar, Send, Calculator, Download, FileText, RefreshCw, Smartphone, ArrowRight } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 

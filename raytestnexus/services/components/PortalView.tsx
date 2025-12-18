@@ -8,7 +8,7 @@ import {
     Gavel, Percent, Video, Download, MessageCircle, LogOut, Smartphone, Sparkles, 
     DollarSign, VideoOff, Layers, ArrowRight, ShieldCheck, Activity, BrainCircuit, RefreshCw 
 } from 'lucide-react';
-import { Contact, ClientTask, Invoice, ClientDocument, AgencyBranding, Course, FundingGoal, CreditAnalysis } from '../types';
+import { Contact, ClientTask, Invoice, ClientDocument, AgencyBranding, Course, FundingGoal, CreditAnalysis } from '../../types';
 import DocumentVault from './DocumentVault';
 import ReferralHub from './ReferralHub';
 import BusinessProfile from './BusinessProfile';

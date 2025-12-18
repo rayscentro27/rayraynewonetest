@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Rocket, BrainCircuit, Layout, Briefcase, Users, Layers, ArrowRight, CheckCircle, Clock, ShieldCheck, Key, Globe, Plus } from 'lucide-react';
-import { ViewMode } from '../types';
+import { ViewMode } from '../../types';
 
 interface AdminSetupWizardProps {
   onNavigate: (view: ViewMode) => void;

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { LayoutDashboard, Users, Inbox, Phone, Menu } from 'lucide-react';
-import { ViewMode } from '../types';
+import { ViewMode } from '../../types';
 
 interface MobileNavProps {
   currentView: ViewMode;

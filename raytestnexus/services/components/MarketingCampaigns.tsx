@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Contact, MarketingAutomation, SocialPost, AgencyBranding } from '../types';
+import { Contact, MarketingAutomation, SocialPost, AgencyBranding } from '../../types';
 import { 
   Zap, Mail, Sparkles, Video, Instagram, Linkedin, Smartphone, 
   RefreshCw, Film, Wand2, CheckCircle, Share2, Play, 

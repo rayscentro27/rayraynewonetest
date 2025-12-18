@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, ClientTask, EnrichedData } from '../types';
+import { Contact, ClientTask, EnrichedData } from '../../types';
 import { 
   MoreHorizontal, Search, Sparkles, X, LayoutList, Kanban, 
   Target, Video, RefreshCw, Check, ArrowRight, Globe, 

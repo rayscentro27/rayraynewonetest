@@ -1,6 +1,6 @@
 
 import React, { useState, useRef } from 'react';
-import { Lender } from '../types';
+import { Lender } from '../../types';
 import { Building2, Search, Upload, RefreshCw, FileText, CheckCircle, XCircle, AlertTriangle, Briefcase, DollarSign, Calendar, Sliders } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 

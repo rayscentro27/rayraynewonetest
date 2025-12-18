@@ -6,7 +6,7 @@ import {
   History, Zap, CheckCircle, ArrowRight, Lightbulb, Target, 
   ShieldAlert, MessageSquare 
 } from 'lucide-react';
-import { Contact } from '../types';
+import { Contact } from '../../types';
 import AdminSetupWizard from './AdminSetupWizard';
 import { GoogleGenAI } from '@google/genai';
 

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact } from '../types';
+import { Contact } from '../../types';
 import { Share2, Copy, Users, DollarSign, TrendingUp, CheckCircle, Clock } from 'lucide-react';
 
 interface ReferralHubProps {

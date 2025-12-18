@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
-import { Contact, FinancialMonth, FinancialSpreading } from '../types';
+import { Contact, FinancialMonth, FinancialSpreading } from '../../types';
 import { Activity, Save, Calculator, AlertOctagon } from 'lucide-react';
 
 interface CashFlowAnalyzerProps {

@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Contact, Message } from '../types';
+import { Contact, Message } from '../../types';
 import { Send, User, Bot, CheckCheck } from 'lucide-react';
 
 interface MessageCenterProps {

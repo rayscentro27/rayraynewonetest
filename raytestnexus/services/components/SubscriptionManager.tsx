@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, Subscription } from '../types';
+import { Contact, Subscription } from '../../types';
 import { CheckCircle, Star, Zap, Crown, CreditCard, AlertCircle } from 'lucide-react';
 
 interface SubscriptionManagerProps {

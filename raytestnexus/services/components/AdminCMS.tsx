@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { AgencyBranding, ViewMode } from '../types';
+import { AgencyBranding, ViewMode } from '../../types';
 import { Layout, Palette, Type, Globe, Save, CheckCircle, RefreshCw, Smartphone, Monitor, Code, Settings, Share2, ArrowRight } from 'lucide-react';
 
 interface AdminCMSProps {

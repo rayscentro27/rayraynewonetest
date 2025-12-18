@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, CommissionProfile, PayoutRecord } from '../types';
+import { Contact, CommissionProfile, PayoutRecord } from '../../types';
 import { DollarSign, User, TrendingUp, Download, Plus, CheckCircle, Calculator, Wallet, ArrowRight } from 'lucide-react';
 
 interface CommissionManagerProps {

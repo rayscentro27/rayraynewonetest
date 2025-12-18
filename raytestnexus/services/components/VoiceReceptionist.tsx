@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { VoiceAgentConfig, CallLog } from '../types';
+import { VoiceAgentConfig, CallLog } from '../../types';
 import { PhoneCall, Mic, StopCircle, Settings, Save, PlayCircle, BarChart3, User, BookOpen, Volume2, ShieldCheck, AlertTriangle } from 'lucide-react';
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
 

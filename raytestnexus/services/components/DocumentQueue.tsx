@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Contact, ClientDocument } from '../types';
+import { Contact, ClientDocument } from '../../types';
 import { FileText, CheckCircle, XCircle, Eye, Clock, AlertCircle, Search, Filter, Shield, Download } from 'lucide-react';
 
 interface DocumentQueueProps {

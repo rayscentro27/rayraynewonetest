@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Contact, Grant } from '../types';
+import { Contact, Grant } from '../../types';
 import { Search, Loader, Plus, CheckCircle, ExternalLink, Edit2, Trash2, BookOpen, Sparkles, Filter } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 import GrantApplicationModal from './GrantApplicationModal';

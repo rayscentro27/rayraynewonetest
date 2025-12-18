@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Contact, Lender, ClientTask } from '../types';
+import { Contact, Lender, ClientTask } from '../../types';
 import { CheckCircle, XCircle, AlertTriangle, ArrowRight, DollarSign, Calendar, Lock } from 'lucide-react';
 
 // Mock Database of Lenders

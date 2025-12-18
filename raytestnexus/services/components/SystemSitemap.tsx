@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ViewMode } from '../types';
+import { ViewMode } from '../../types';
 import { 
   LayoutGrid, Globe, Users, ShieldCheck, Mail, Zap, 
   Phone, Mic, Target, Briefcase, RefreshCw, FileText, 

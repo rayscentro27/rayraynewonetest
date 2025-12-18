@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, ClientTask } from '../types';
+import { Contact, ClientTask } from '../../types';
 import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, Clock, MapPin, User, Mic, FileText, Send, Sparkles, X, CheckCircle, StopCircle, RefreshCw } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 

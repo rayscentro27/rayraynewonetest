@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Contact } from '../types';
+import { Contact } from '../../types';
 import { Trophy, TrendingUp, Phone, Star, Activity, Crown, Flame, Target, DollarSign, X } from 'lucide-react';
 
 interface SalesLeaderboardProps {

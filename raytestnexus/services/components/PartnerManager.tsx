@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, Notification } from '../types';
+import { Contact, Notification } from '../../types';
 import { Users, DollarSign, TrendingUp, Search, CheckCircle, Clock, ExternalLink, Briefcase, Award } from 'lucide-react';
 
 interface PartnerManagerProps {

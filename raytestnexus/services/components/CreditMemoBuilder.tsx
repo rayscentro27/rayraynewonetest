@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Contact, CreditMemo } from '../types';
+import { Contact, CreditMemo } from '../../types';
 import { FileText, Sparkles, Printer, RefreshCw, AlertTriangle, CheckCircle, ShieldCheck, Download, Users } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 

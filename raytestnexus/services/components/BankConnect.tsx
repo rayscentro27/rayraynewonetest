@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, BankAccount, FinancialSpreading } from '../types';
+import { Contact, BankAccount, FinancialSpreading } from '../../types';
 import { Building2, ShieldCheck, Lock, Loader, CheckCircle } from 'lucide-react';
 
 interface BankConnectProps {

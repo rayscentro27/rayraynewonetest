@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact } from '../types';
+import { Contact } from '../../types';
 import { Wallet as WalletIcon, ArrowUpRight, ArrowDownLeft, History, CreditCard, AlertCircle, Loader } from 'lucide-react';
 
 interface WalletProps {

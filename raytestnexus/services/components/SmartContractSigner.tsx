@@ -1,6 +1,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
-import { FundingOffer } from '../types';
+import { FundingOffer } from '../../types';
 import { PenTool, X, Shield, CheckCircle, AlertTriangle, Eraser, Type, MousePointer2 } from 'lucide-react';
 
 interface SmartContractSignerProps {

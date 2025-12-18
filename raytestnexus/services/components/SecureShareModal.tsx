@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, ClientDocument } from '../types';
+import { Contact, ClientDocument } from '../../types';
 import { Shield, Link, Copy, Calendar, Lock, CheckCircle, FileText, X, Eye, Clock } from 'lucide-react';
 
 interface SecureShareModalProps {

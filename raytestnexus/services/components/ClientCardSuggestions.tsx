@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { CreditCard, Sparkles, CheckCircle, ArrowRight, ExternalLink, ShieldCheck, DollarSign, Info } from 'lucide-react';
-import { Contact, CreditCardProduct } from '../types';
+import { Contact, CreditCardProduct } from '../../types';
 
 interface ClientCardSuggestionsProps {
   contact: Contact;

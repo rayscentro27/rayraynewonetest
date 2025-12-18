@@ -6,7 +6,7 @@ import {
   Menu, X, Megaphone, ChevronRight, Share2, Map as MapIcon, 
   Target, BarChart3, Star, CreditCard, ShieldCheck, GraduationCap, MapPinned
 } from 'lucide-react';
-import { ViewMode, AgencyBranding } from '../types';
+import { ViewMode, AgencyBranding } from '../../types';
 
 interface SidebarProps {
   currentView: ViewMode;

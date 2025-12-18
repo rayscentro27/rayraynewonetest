@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Search, Globe, Building2, User, Phone, DollarSign, Newspaper, CheckCircle, ArrowRight, Loader, Sparkles, X } from 'lucide-react';
-import { EnrichedData, Contact } from '../types';
+import { EnrichedData, Contact } from '../../types';
 import * as geminiService from '../services/geminiService';
 
 interface LeadEnrichmentModalProps {

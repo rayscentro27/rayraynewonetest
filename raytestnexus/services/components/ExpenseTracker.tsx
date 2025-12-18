@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Expense } from '../types';
+import { Expense } from '../../types';
 import { CreditCard, DollarSign, TrendingUp, Plus, Trash2, PieChart, Filter, Tag, Briefcase, Megaphone, Smartphone, Server, Download, FileText } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, LedgerEntry } from '../types';
+import { Contact, LedgerEntry } from '../../types';
 import { Plus, Activity } from 'lucide-react';
 
 interface LedgerManagerProps {

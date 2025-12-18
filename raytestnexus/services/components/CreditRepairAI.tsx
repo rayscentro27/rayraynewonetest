@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, NegativeItem, ClientDocument } from '../types';
+import { Contact, NegativeItem, ClientDocument } from '../../types';
 import { ShieldAlert, FileText, RefreshCw, Download, CheckCircle, Upload, Scan, ArrowRight, Gavel, ListChecks, Zap, Clock, Search, AlertTriangle, ChevronRight, Save } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 import { supabase } from '../lib/supabaseClient';

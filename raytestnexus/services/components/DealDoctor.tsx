@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Contact, RescuePlan } from '../types';
+import { Contact, RescuePlan } from '../../types';
 import { Stethoscope, AlertTriangle, CheckCircle, Clock, Activity, RefreshCw, ArrowRight } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 

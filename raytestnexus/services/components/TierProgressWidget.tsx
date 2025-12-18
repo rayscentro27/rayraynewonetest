@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Contact } from '../types';
+import { Contact } from '../../types';
 import { Shield, Hammer, Zap, Crown, Award, CheckCircle, Lock, ChevronRight, AlertCircle } from 'lucide-react';
 
 interface TierProgressWidgetProps {

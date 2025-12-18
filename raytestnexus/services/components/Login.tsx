@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 /* Added X to the lucide-react import list */
 import { Hexagon, Lock, Mail, ArrowRight, User, ShieldCheck, Fingerprint, Building2, Phone, UserPlus, ChevronLeft, Sparkles, AlertCircle, Info, Code, Database, X } from 'lucide-react';
-import { User as UserType, Contact, ClientTask } from '../types';
+import { User as UserType, Contact, ClientTask } from '../../types';
 import { supabase, isSupabaseConfigured } from '../lib/supabaseClient';
 import PhoneNotification from './PhoneNotification';
 

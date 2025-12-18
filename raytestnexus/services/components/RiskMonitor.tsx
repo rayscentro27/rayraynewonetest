@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { RiskAlert } from '../types';
+import { RiskAlert } from '../../types';
 import { ShieldAlert, AlertTriangle, Search, Activity, Lock, Scale, FileWarning, RefreshCw, Eye, CheckCircle } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 

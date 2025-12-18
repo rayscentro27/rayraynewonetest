@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { PipelineRule } from '../types';
+import { PipelineRule } from '../../types';
 import { GitBranch, Zap, Plus, Trash2, Play, AlertCircle, ArrowRight, CheckCircle, Sparkles, RefreshCw, Layers } from 'lucide-react';
 import * as geminiService from '../services/geminiService';
 
