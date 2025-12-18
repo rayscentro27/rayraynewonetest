@@ -1,0 +1,9 @@
+{
+  "name": "Nexus Financial OS",
+  "description": "The complete AI Operating System for business funding using the 4-Tier Strategic Roadmap. Features automated compliance vetting, net-30 tracking, and guided application calls.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera",
+    "geolocation"
+  ]
+}
