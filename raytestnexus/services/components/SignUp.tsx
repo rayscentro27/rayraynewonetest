@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Hexagon, ArrowRight, CheckCircle, Shield, TrendingUp, AlertCircle, Loader, Sparkles } from 'lucide-react';
 import { Contact, ClientTask } from '../../types';
-import { supabase, isSupabaseConfigured } from '../lib/supabaseClient';
+import { supabase, isSupabaseConfigured } from '../../lib/supabaseClient';
 
 interface SignUpProps {
   onRegister: (contact: Contact) => void;
