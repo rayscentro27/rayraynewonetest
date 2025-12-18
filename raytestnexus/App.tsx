@@ -37,6 +37,7 @@ import RiskMonitor from './services/components/RiskMonitor';
 import SalesLeaderboard from './services/components/SalesLeaderboard';
 import GrantManager from './services/components/GrantManager';
 import CourseBuilder from './services/components/CourseBuilder';
+import SupabaseStatus from './services/components/SupabaseStatus';
 import LoanServicing from './services/components/LoanServicing';
 import CreditMemoBuilder from './services/components/CreditMemoBuilder';
 import AdminCMS from './services/components/AdminCMS';
@@ -219,6 +220,7 @@ export const App = () => {
              </div>
              <div className="flex items-center gap-6">
                <div className="hidden lg:flex items-center gap-2 text-xs font-black uppercase tracking-widest text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-100"><Zap size={14} className="fill-emerald-600" /> AI Link Active</div>
+               <SupabaseStatus />
                <div className="flex items-center gap-4 border-l border-slate-200 pl-6">
                  <button className="p-2 text-slate-400 hover:text-indigo-600 transition-colors relative"><Bell size={22} /><span className="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span></button>
                  <div className="w-10 h-10 rounded-2xl bg-slate-950 text-white border border-white/10 flex items-center justify-center font-black text-sm shadow-xl transform hover:scale-105 transition-all cursor-pointer">{user?.email?.charAt(0).toUpperCase()}</div>
