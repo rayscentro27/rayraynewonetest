@@ -89,8 +89,21 @@ const SignUp: React.FC<SignUpProps> = ({ onRegister }) => {
 
       if (authError) throw authError;
 
+      const profileId = authData.user?.id || `temp_${Date.now()}`;
+
+      // Create profile record
+      const { error: profileError } = await supabase.from('profiles').insert({
+        id: profileId,
+        role: 'client',
+        name: formData.name,
+        email: formData.email,
+        settings: { company: formData.company }
+      });
+      if (profileError) throw profileError;
+
+      // Create CRM contact record
       const newContact: Contact = {
-        id: authData.user?.id || `temp_${Date.now()}`,
+        id: profileId,
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -110,7 +123,9 @@ const SignUp: React.FC<SignUpProps> = ({ onRegister }) => {
         }
       };
 
-      await supabase.from('contacts').insert([newContact]);
+      const { error: contactError } = await supabase.from('contacts').insert([newContact]);
+      if (contactError) throw contactError;
+
       onRegister(newContact);
       setIsSubmitted(true);
     } catch (err: any) {
