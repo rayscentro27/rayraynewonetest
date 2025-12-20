@@ -129,7 +129,9 @@ const SignUp: React.FC<SignUpProps> = ({ onRegister }) => {
       onRegister(newContact);
       setIsSubmitted(true);
     } catch (err: any) {
-      setError(err.message || 'Registration failed. Please try again.');
+      const msg = err?.message || err?.error_description || 'Registration failed. Please try again.';
+      console.error('Supabase signup error', err);
+      setError(msg);
     } finally {
       setLoading(false);
     }
