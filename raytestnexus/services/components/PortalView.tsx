@@ -216,7 +216,7 @@ const PortalView: React.FC<PortalViewProps> = ({ contact, onUpdateContact, brand
              </div>
           )}
 
-          {activeTab === 'vault' && <DocumentVault contact={contact} onUpdateContact={onUpdateContact} readOnly={true} />}
+          {activeTab === 'vault' && <DocumentVault contact={contact} onUpdateContact={onUpdateContact} readOnly={false} />}
           {activeTab === 'profile' && <BusinessProfile contact={contact} onUpdateContact={onUpdateContact} />}
           {activeTab === 'offers' && <OfferManager contact={contact} onUpdateContact={onUpdateContact} />}
           {activeTab === 'cards' && <ClientCardSuggestions contact={contact} />}

@@ -5,7 +5,7 @@ import { User, Session } from '@supabase/supabase-js';
 // Define the shape of the profile from the DB
 export interface UserProfile {
   id: string;
-  role: 'admin' | 'client' | 'partner';
+  role: 'admin' | 'client' | 'partner' | 'sales' | 'user';
   name?: string;
   email?: string;
   settings?: {
@@ -13,6 +13,11 @@ export interface UserProfile {
     primaryColor?: string;
     [key: string]: any;
   };
+}
+
+export interface ClientSummary {
+  id: string;
+  name: string;
 }
 
 interface AuthContextType {
@@ -23,6 +28,11 @@ interface AuthContextType {
   loading: boolean;
   refreshProfile: () => Promise<void>;
   debugLogin: (appUser: any) => Promise<void>;
+  clientId: string | null;
+  setClientId: (id: string | null) => void;
+  accessibleClients: ClientSummary[];
+  isInternalUser: boolean;
+  refreshAccessibleClients: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType>({
@@ -33,6 +43,11 @@ const AuthContext = createContext<AuthContextType>({
   loading: true,
   refreshProfile: async () => {},
   debugLogin: async () => {},
+  clientId: null,
+  setClientId: () => {},
+  accessibleClients: [],
+  isInternalUser: false,
+  refreshAccessibleClients: async () => {},
 });
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -40,6 +55,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [user, setUser] = useState<User | null>(null);
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
+  const [clientId, setClientIdState] = useState<string | null>(null);
+  const [accessibleClients, setAccessibleClients] = useState<ClientSummary[]>([]);
+
+  const isInternalUser = !!profile && ['admin', 'user', 'sales', 'partner'].includes(profile.role);
 
   const fetchProfile = async (userId: string) => {
     if (!isSupabaseConfigured) return null;
@@ -65,6 +84,71 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (user) {
       const prof = await fetchProfile(user.id);
       if (prof) setProfile(prof);
+    }
+  };
+
+  const setClientId = (id: string | null) => {
+    setClientIdState(id);
+    if (id) {
+      localStorage.setItem('activeClientId', id);
+    } else {
+      localStorage.removeItem('activeClientId');
+    }
+  };
+
+  const fetchAccessibleClients = async (role: UserProfile['role'], userId: string) => {
+    if (!isSupabaseConfigured) return [];
+
+    if (role === 'admin') {
+      const { data, error } = await supabase
+        .from('clients')
+        .select('id, name')
+        .order('name', { ascending: true });
+
+      if (error) {
+        console.warn('Error fetching clients:', error.message);
+        return [];
+      }
+      return (data || []) as ClientSummary[];
+    }
+
+    if (['user', 'sales', 'partner'].includes(role)) {
+      const { data, error } = await supabase
+        .from('client_staff')
+        .select('client_id')
+        .eq('user_id', userId);
+
+      if (error) {
+        console.warn('Error fetching client assignments:', error.message);
+        return [];
+      }
+
+      const clientIds = (data || []).map((row: any) => row.client_id).filter(Boolean);
+      if (clientIds.length === 0) return [];
+
+      const { data: clients, error: clientsError } = await supabase
+        .from('clients')
+        .select('id, name')
+        .in('id', clientIds)
+        .order('name', { ascending: true });
+
+      if (clientsError) {
+        console.warn('Error fetching clients:', clientsError.message);
+        return [];
+      }
+
+      return (clients || []) as ClientSummary[];
+    }
+
+    return [];
+  };
+
+  const refreshAccessibleClients = async () => {
+    if (!user || !profile) return;
+    const clients = await fetchAccessibleClients(profile.role, user.id);
+    setAccessibleClients(clients);
+    if (clients.length > 0 && !clients.some((client) => client.id === clientId)) {
+      setClientIdState(clients[0].id);
     }
   };
 
@@ -156,6 +240,52 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     };
   }, []);
 
+  useEffect(() => {
+    const resolveClientContext = async () => {
+      if (!user || !profile || !isSupabaseConfigured) {
+        setAccessibleClients([]);
+        setClientIdState(null);
+        return;
+      }
+
+      if (profile.role === 'client') {
+        const { data, error } = await supabase
+          .from('client_users')
+          .select('client_id')
+          .eq('user_id', user.id)
+          .maybeSingle();
+
+        if (error) {
+          console.warn('Error fetching client user mapping:', error.message);
+          setClientIdState(null);
+          return;
+        }
+
+        setClientIdState(data?.client_id ?? null);
+        setAccessibleClients([]);
+        return;
+      }
+
+      if (['admin', 'user', 'sales', 'partner'].includes(profile.role)) {
+        const clients = await fetchAccessibleClients(profile.role, user.id);
+        setAccessibleClients(clients);
+        const storedClientId = localStorage.getItem('activeClientId');
+        const isStoredValid = storedClientId && clients.some((c) => c.id === storedClientId);
+        if (isStoredValid) {
+          setClientIdState(storedClientId);
+        } else {
+          setClientIdState(clients[0]?.id ?? null);
+        }
+        return;
+      }
+
+      setAccessibleClients([]);
+      setClientIdState(null);
+    };
+
+    resolveClientContext();
+  }, [user, profile]);
+
   const signOut = async () => {
     if (!isSupabaseConfigured) {
         setUser(null);
@@ -174,7 +304,22 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <AuthContext.Provider value={{ session, user, profile, signOut, loading, refreshProfile, debugLogin }}>
+    <AuthContext.Provider
+      value={{
+        session,
+        user,
+        profile,
+        signOut,
+        loading,
+        refreshProfile,
+        debugLogin,
+        clientId,
+        setClientId,
+        accessibleClients,
+        isInternalUser,
+        refreshAccessibleClients,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );

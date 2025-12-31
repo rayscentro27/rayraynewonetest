@@ -42,12 +42,15 @@ import LoanServicing from './services/components/LoanServicing';
 import CreditMemoBuilder from './services/components/CreditMemoBuilder';
 import AdminCMS from './services/components/AdminCMS';
 import SystemSitemap from './services/components/SystemSitemap';
+import AdminClients from './services/components/AdminClients';
+import DocumentsPage from './services/components/DocumentsPage';
 import { ViewMode, Contact, AgencyBranding, Course } from './types';
 import { Search, Bell, Zap, Command } from 'lucide-react';
 import { supabase, isSupabaseConfigured } from './lib/supabaseClient';
 import { useAuth } from './contexts/AuthContext';
 import { processAutomations } from './services/automationEngine';
 import PhoneNotification from './services/components/PhoneNotification';
+import ClientSelector from './services/components/ClientSelector';
 
 const MOCK_CONTACTS: Contact[] = [
   {
@@ -177,6 +180,8 @@ export const App = () => {
       case ViewMode.CRM: return <CRMTable contacts={contacts} onUpdateContact={updateContact} onAddContact={addContact} />;
       case ViewMode.SETTINGS: return <Settings branding={branding} onUpdateBranding={setBranding} />;
       case ViewMode.ADMIN_CMS: return <AdminCMS branding={branding} onUpdateBranding={setBranding} />;
+      case ViewMode.ADMIN_CLIENTS: return <AdminClients />;
+      case ViewMode.DOCUMENTS: return <DocumentsPage />;
       case ViewMode.INBOX: return <UnifiedInbox contacts={contacts} />;
       case ViewMode.MARKETING: return <MarketingCampaigns contacts={contacts} onUpdateContact={updateContact} branding={branding} />;
       case ViewMode.POWER_DIALER: return <PowerDialer queue={contacts} onUpdateContact={updateContact} onClose={() => setCurrentView(ViewMode.CRM)} />;
@@ -219,6 +224,7 @@ export const App = () => {
                 <Search size={18} className="group-hover:text-indigo-500 transition-colors" /><span className="flex-1">Search anything...</span><kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 bg-white border border-slate-200 rounded-lg text-[10px] font-mono font-bold text-slate-400"><Command size={10} /> K</kbd>
              </div>
              <div className="flex items-center gap-6">
+               <ClientSelector />
                <div className="hidden lg:flex items-center gap-2 text-xs font-black uppercase tracking-widest text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-xl border border-emerald-100"><Zap size={14} className="fill-emerald-600" /> AI Link Active</div>
                <SupabaseStatus />
                <div className="flex items-center gap-4 border-l border-slate-200 pl-6">

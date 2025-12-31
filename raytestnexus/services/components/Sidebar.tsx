@@ -48,6 +48,8 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onViewChange, pendingDoc
             <div className="px-3 mb-2 flex items-center justify-between"><span className="text-[10px] font-black text-slate-600 uppercase tracking-[0.2em]">Workspace</span></div>
             <SidebarItem id={ViewMode.DASHBOARD} label="Dashboard" icon={LayoutDashboard} currentView={currentView} onViewChange={handleNav} />
             <SidebarItem id={ViewMode.INBOX} label="Unified Inbox" icon={Inbox} currentView={currentView} onViewChange={handleNav} />
+            <SidebarItem id={ViewMode.DOCUMENTS} label="Documents" icon={FileText} currentView={currentView} onViewChange={handleNav} />
+            <SidebarItem id={ViewMode.ADMIN_CLIENTS} label="Invite Clients" icon={Users} currentView={currentView} onViewChange={handleNav} />
             <SidebarItem id={ViewMode.ADMIN_CMS} label="Site Builder" icon={Layout} currentView={currentView} onViewChange={handleNav} />
           </section>
 

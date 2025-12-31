@@ -5,7 +5,7 @@ export interface User {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'client' | 'partner' | 'sales';
+  role: 'admin' | 'client' | 'partner' | 'sales' | 'user';
   contactId?: string;
 }
 
@@ -633,6 +633,7 @@ export enum ViewMode {
   CRM = 'CRM',
   INBOX = 'INBOX',
   PORTAL = 'PORTAL',
+  DOCUMENTS = 'DOCUMENTS',
   RESOURCES = 'RESOURCES',
   SETTINGS = 'SETTINGS',
   SIGNUP = 'SIGNUP',
@@ -641,6 +642,7 @@ export enum ViewMode {
   LOGIN = 'LOGIN',
   MARKETING = 'MARKETING',
   ADMIN_CMS = 'ADMIN_CMS',
+  ADMIN_CLIENTS = 'ADMIN_CLIENTS',
   POWER_DIALER = 'POWER_DIALER',
   SALES_TRAINER = 'SALES_TRAINER',
   VOICE_RECEPTIONIST = 'VOICE_RECEPTIONIST',
